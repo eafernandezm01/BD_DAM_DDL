@@ -2,23 +2,46 @@
 BASE DE DATOS INICIAL
 */
 
+-- Borra una base de datos si existe.
+drop database IF exists tipoDatosDB;
+
 -- 1 Crear la base de datos
-create database IF NOT EXISTS tipoDatosDB;
+-- create database IF NOT EXISTS tipoDatosDB;
+create database tipoDatosDB;
+
+
 
 -- 2 Usar esa bd
 use tipoDatosDB;
 
 -- 3 Crear tabla usando enteros
-create table ENTERO (
-	-- nombre columna y tipo
-    ID INT, -- -2147483648 a 2147483647  0 – 4294967295.
-    edad tinyint, -- -128 a 127   0 a 255
-    puntos smallint, -- -32768 a 32767      0 a 65535
-	sueldo mediumint, -- -8388608 a 8388607      0 a 16777215
-    superEntero bigint  -- -9223372036854775808 a 9223372036854775807     0 a 18446744073709551615.
+CREATE TABLE ENTERO (
+    ID INT,
+    edad TINYINT,
+    puntos SMALLINT,
+    sueldo MEDIUMINT,
+    superEntero BIGINT
 );
 
-insert into ENTERO (ID, edad, puntos, sueldo, superEntero) VALUES (1, 42, 1000,60000,6347326487236473284);
+-- Creamos una tabla para poner decimales
+CREATE TABLE DECIMALES (
+    ID INT,
+    sueldo DECIMAL(8 , 2 ),
+    sueldo2 NUMERIC(8 , 2 ),
+    sueldo3 FLOAT,
+    sueldo4 DOUBLE
+);
+
+
+CREATE TABLE CADENAS (
+    ID INT,
+    HIJOS CHAR(1),
+    NOMBRE VARCHAR(150),
+    LIBRO TEXT,
+    TIT_LIBRO TINYTEXT,
+    LIBRO_EXT MEDIUMTEXT,
+    SUPER_LIBRO LONGTEXT
+);
 
 
 
