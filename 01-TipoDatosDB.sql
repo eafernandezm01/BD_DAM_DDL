@@ -1,15 +1,9 @@
 /*
 BASE DE DATOS INICIAL
 */
-
--- Borra una base de datos si existe.
-drop database IF exists tipoDatosDB;
-
 -- 1 Crear la base de datos
 -- create database IF NOT EXISTS tipoDatosDB;
 create database tipoDatosDB;
-
-
 
 -- 2 Usar esa bd
 use tipoDatosDB;

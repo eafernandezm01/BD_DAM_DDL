@@ -1,0 +1,40 @@
+-- Creo la bd
+create database INSTITUTO;
+
+-- usar
+use INSTITUTO;
+
+-- TABLA ALUMNO
+CREATE TABLE ALUMNO (
+    nif VARCHAR(9),
+    nombre VARCHAR(100) NOT NULL,
+    ap1 VARCHAR(100) NOT NULL,
+    ap2 VARCHAR(100) NOT NULL,
+    instituto VARCHAR (100) NOT NULL default 'IES Augustóbriga',
+    CONSTRAINT PK_ALUMNO PRIMARY KEY (nif)
+);
+
+-- ASIGNATURA
+CREATE TABLE ASIGNATURA (
+    id_asig INT,
+    nom_asig VARCHAR(100) NOT NULL,
+    credito TINYINT UNSIGNED NOT NULL,
+    CONSTRAINT PK_ASIGNATURA PRIMARY KEY (id_asig)
+);
+
+-- CALIFICACIONES
+CREATE TABLE CALIFICACION (
+    nif_nota VARCHAR(9),
+    id_asignatura INT,
+    fecha DATE,
+    nota DECIMAL(4 , 2 ) UNSIGNED NOT NULL,
+    CONSTRAINT PK_CALIFICACION PRIMARY KEY (nif_nota , id_asignatura , fecha),
+    CONSTRAINT FK_NIF_NOTA_ALUMNO FOREIGN KEY (nif_nota)
+        REFERENCES ALUMNO (nif),
+    CONSTRAINT FK_ID_ASIGNATURA_ASIGNATURA FOREIGN KEY (id_asignatura)
+        REFERENCES ASIGNATURA (id_asig)
+); 
+
+
+
+

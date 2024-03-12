@@ -1,8 +1,6 @@
-create database if not exists ACTIVIDAD_1;
+create database ACTIVIDAD_1;
 
 USE ACTIVIDAD_1;
-
-drop TABLE PRODUCTO;
 
 -- PRODUCTO (codigo, nombre, precio)
 CREATE TABLE PRODUCTO (
@@ -35,13 +33,15 @@ CREATE TABLE EMPLEADO (
     nombre VARCHAR(100) NOT NULL,
     ap1 VARCHAR(100) NOT NULL,
     ap2 VARCHAR(100),
-    tfno VARCHAR(12) NOT NULL,
+    tfno CHAR(12) NOT NULL,
     mail VARCHAR(100),
     fecha_Nac DATE NOT NULL,
     rol ENUM('PJ', 'PS', 'AP', 'AF') NOT NULL,
     ultimo_Acceso DATETIME NOT NULL,
     CONSTRAINT PK_EMPLEADO PRIMARY KEY (dni)
 );
+
+
 
 
 
