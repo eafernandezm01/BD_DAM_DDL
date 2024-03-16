@@ -77,8 +77,13 @@ show tables;
 
 -- Mostramos las estructuras de las tablas
 desc cadenas;
+
 desc decimales;
+
 desc entero;
-desc fecha_hora;
+
+desc FECHAS_HORAS;
+
 desc ficheros;
+
 desc predefinidos;
