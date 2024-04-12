@@ -58,6 +58,7 @@ CREATE TABLE PREDEFINIDOS (
         ('admin', 'editor', 'usuario')
 );
 
+
 CREATE TABLE FECHAS_HORAS (
     id INT,
     -- Sólo fecha YYYY-MM-DD

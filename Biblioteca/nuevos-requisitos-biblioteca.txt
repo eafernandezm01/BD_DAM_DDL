@@ -1,0 +1,22 @@
+Crea la BD con el script 01-create-biblioteca-DDL.sql, ejecuta despues 03-insert-biblioteca-DML.sql, genera un nuevo script que se llame 04-nuevos-requisitos-biblioteca-DDL.sql:
+
+Para la tabla USUARIO:
+-- Agregar una columna fecha_registro para registrar la fecha en que se registró el usuario en la biblioteca no nulo por defecto 1 de enero de 2024
+-- Modificar la columna telefono para que acepte valores únicos.
+-- Agregar una columna tipo_usuario ('SOCIO', 'EMPLEADO', 'INFANTIL') admite nulo
+-- Modificar la columna direccion para separarla en múltiples campos como calle, población, CP. 
+-- Borra la columna dirección.
+-- Agregar una columna estado_cuenta ('caducado', 'bloqueado', 'activo') por defecto activo.
+-- Modificar la columna codigo para que sea autoincremental. ¿Te deja? ¿Qué harías?
+-- Crea una tabla DUP_USUARIO que contenga la misma estructura que USUARIO.
+-- Crea una tabla HCO_USUARIO que contenga la misma estructura y los datos de usuario.
+-- Renombra la tabla USUARIO por LECTOR
+-- Renombra la columna nombre por nombre_completo
+-- Crea una columna pwd no nula que contenga por defecto '12345'
+-- Crea un índice sobre estado_cuenta.
+-- Borra el índice.
+-- Crea una vista VLECTOR con los datos del usuario excepto la pwd.
+-- Consulta todas las columnas de la vista.
+-- Trunca la tabla HCO_USUARIO
+-- Muestra todas las tablas de la BD biblioteca.
+-- Muestra la estructura final de LECTOR, HCO_USUARIO, DUP_USUARIO Y VLECTOR.
